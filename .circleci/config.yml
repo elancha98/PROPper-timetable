@@ -14,7 +14,6 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-      working_directory: ~/repo
 
       # Download and cache dependencies
       - restore_cache:
@@ -29,6 +28,9 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-        
+
+
+    steps:     
       # run tests!
       - run: mvn integration-test
+    working_directory: ~/repo
