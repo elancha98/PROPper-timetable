@@ -6,6 +6,6 @@ package prop.fib.upc.edu;
 public class AppTest 
 {
     public void testMain() {
-        assert falseq;
+        assert false;
     }
 }
