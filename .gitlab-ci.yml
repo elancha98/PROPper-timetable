@@ -1,4 +1,9 @@
-java:
+image: maven:latest
+
+stages:
+  - test
+
+test:
   stage: test
   script:
-  - mvn verify
+    - mvn verify
